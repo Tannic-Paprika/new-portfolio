@@ -1,5 +1,4 @@
 import { BsGithub, BsTwitterX, BsInstagram, BsYoutube } from 'react-icons/bs'
-import heroImg from '../image/heroIMG.jpg'
 import Tartaglia from '../image/Tartaglia.webp'
 export default function Hero() {
     return(

@@ -1,6 +1,6 @@
 import resumeIMG from '../image/bloggpage.png'
 import shopIMG from '../image/shopPage.png'
-import personalIMG from '../image/personalpage.png'
+import personalIMG from '../image/portfolio.png'
 
 const ProjectArray = [
     {
@@ -8,6 +8,7 @@ const ProjectArray = [
         image: personalIMG,
         projectName: 'Personal Page',
         description: 'My personal page where i will be keeping track of my new projects and adding more information about me as time goes by. Also the page you are currently viewing!',
+        githubLink: "https://github.com/Subham15112001/portfolioWebsite" 
     },
     {
         id: 2,

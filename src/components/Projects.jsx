@@ -1,6 +1,4 @@
-import resumeIMG from '../image/resume.png'
-import shopIMG from '../image/shop.png'
-import personalIMG from '../image/personal.png'
+
 import ProjectArray from './ProjectArray'
 export default function Projects() {
     return(
