@@ -6,7 +6,11 @@ export default {
     "./src/components/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cascadia: ['Cascadia Code', 'monospace'],
+      },
+    },
     screens: {
       'xsm' : '300px',
       'sm': '640px',
