@@ -16,7 +16,7 @@ const ProjectArray = [
         projectName: 'Live Code',
         description: 'A code editor made for hackathons in which participants can code together and collaborate',
         githubLink: "https://github.com/Tannic-Paprika/Live-Code",
-        pageLink: "live-code-mu.vercel.app/",
+        pageLink: "https://live-code-mu.vercel.app/",
     },
     {
         id: 3,
