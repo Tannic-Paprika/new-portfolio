@@ -6,10 +6,10 @@ export default function Navbar() {
         <div className="navbar bg-base-100 border-b-2 sticky top-0 z-20">
             <div className="navbar-start xl:px-6 flex gap-4 items-center">
                 <img src={siteIcon} alt="Site Icon" className='w-8'/>
-                <h1 className="xl:text-3xl font-bold">subham</h1>
+                <h1 className="xl:text-3xl font-bold">Raj</h1>
             </div>
             <div className="navbar-end">
-                <button className="btn bg-white rounded-xl" onClick={() => window.location.href = 'mailto:subhambehera889377888@gmail.com'}><BsEnvelope/> Hire me</button>
+                <button className="btn bg-white rounded-xl" onClick={() => window.location.href = 'mailto:rajpattnaik426@gmail.com'}><BsEnvelope/> Hire me</button>
             </div>
         </div>
         </>

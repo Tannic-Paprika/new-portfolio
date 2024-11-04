@@ -1,30 +1,30 @@
-import resumeIMG from '../image/bloggpage.png'
-import shopIMG from '../image/shopPage.png'
-import personalIMG from '../image/portfolio.png'
+import gallery from '../image/gallery.jpg'
+import livecode from '../image/livecode.png'
+import project1 from '../image/project1.png'
 
 const ProjectArray = [
     {
         id: 1,
-        image: personalIMG,
-        projectName: 'Personal Page',
-        description: 'My personal page where i will be keeping track of my new projects and adding more information about me as time goes by. Also the page you are currently viewing!',
-        githubLink: "https://github.com/Subham15112001/portfolioWebsite" 
+        image: gallery,
+        projectName: 'ClearDrive',
+        description: 'A website which shows the most safest roads during poor visibility conditions to prevent accidents.',
+        githubLink: "https://github.com/Tannic-Paprika/Air-visibility-index" 
     },
     {
         id: 2,
-        image: resumeIMG,
-        projectName: 'Blogging Page',
-        description: 'a blog page using React Js for from frontend and appwrite for backend.for state management use redux toolkit and for routing uses React router',
-        githubLink: "https://github.com/Subham15112001/Blogging_webpage",
-        pageLink: "https://blogging-webpage-vs5s.vercel.app",
+        image: livecode,
+        projectName: 'Live Code',
+        description: 'A code editor made for hackathons in which participants can code together and collaborate',
+        githubLink: "https://github.com/Tannic-Paprika/Live-Code",
+        pageLink: "live-code-mu.vercel.app/",
     },
     {
         id: 3,
-        image: shopIMG,
-        projectName: 'Shopping Page',
-        description: 'A project I have worked on to learned redux-toolkit , react-router and implemented cloud function from appwrite also implemented full shopping cart functionality.',
-        githubLink: "https://github.com/Subham15112001/shopping_cart/tree/main/shopping_page",
-        pageLink: "https://shopping-cart-nine-teal.vercel.app/",
+        image: project1,
+        projectName: 'SmartWarch Stresstor',
+        description: 'Built a web interface to show stress levels in real time after ML processing of health vitals from an IoT device.',
+        githubLink: "https://github.com/Tannic-Paprika/Titan_hackathon",
+        pageLink: "https://titan_hackathon.pythonanywhere.com/",
     },
 ]
 
