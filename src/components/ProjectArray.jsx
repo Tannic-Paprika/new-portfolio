@@ -8,7 +8,7 @@ const ProjectArray = [
         image: gallery,
         projectName: 'ClearDrive',
         description: 'A website which shows the most safest roads during poor visibility conditions to prevent accidents.',
-        githubLink: "https://github.com/Tannic-Paprika/Air-visibility-index",
+        githubLink: "https://github.com/Tannic-Paprika/ClearDrive",
         pageLink: "https://devpost.com/software/cleardrive",
     },
     {
