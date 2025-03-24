@@ -5,8 +5,17 @@ import './Experience.css';
 import NeuralSpaceImage from '../image/history/NeuralSpace.png';
 import HyperspecImage from '../image/history/Hyperspec.png';
 import IhubImage from '../image/history/Ihub.png';
+import KiwiImage from '../image/history/gokiwinow_logo.jpeg';
 
 const experienceData = [
+  {
+    role: "Backend Engineer Intern",
+    organisation: "Kiwi",
+    startDate: "January, 2025",
+    endDate: "Now",
+    experiences: ["Developed core backend services (card provisioning, vault, Yes Bank adapter, polling) in a Java microservices architecture at Kiwi", "Optimized caching and log streaming in Signoz to reduce logging costs and improve observability."],
+    imageSrc: KiwiImage,
+  },
   {
     role: "FullStack Engineer Intern",
     organisation: "NeuralSpace Inc.",
