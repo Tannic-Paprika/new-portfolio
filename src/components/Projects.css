@@ -1,9 +1,48 @@
-/* Project Card Hover Effect */
+/* --- scrolling rail --- */
+.project-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;         /* Firefox */
+}
+.project-scroll-container::-webkit-scrollbar { display: none; }  /* Chrome/Safari */
+
+/* --- card sizing --- */
 .project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 calc((100% - 4rem) / 3);      /* 3 cards on desktop */
+  min-width: 280px;                       /* clamp for smaller screens */
+  max-width: 420px;
+  scroll-snap-align: start;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+@media (max-width: 1024px) {               /* 2 cards on tablet */
+  .project-card { flex: 0 0 calc((100% - 2rem) / 2); }
+}
+@media (max-width: 640px) {                /* 1 card on mobile */
+  .project-card { flex: 0 0 100%; }
 }
 
+/* --- hover lift + image zoom --- */
 .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15), 0 10px 10px -5px rgba(0,0,0,0.04);
 }
+.project-card:hover img { transform: scale(1.08); }
+
+/* --- arrow buttons --- */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: white;
+  border: 1px solid #e5e7eb;      /* Tailwind gray-200 */
+  border-radius: 9999px;
+  padding: 0.4rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background 0.2s;
+}
+.scroll-btn:hover { background: #f3f4f6; } /* gray-100 */
