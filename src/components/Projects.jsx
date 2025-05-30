@@ -1,11 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Github, ExternalLink, ChevronLeft, ChevronRight, Code2, Zap } from 'lucide-react';
+import cleardrive from '../image/gallery.jpg'
+import livecode from '../image/livecode.png'
+import project1 from '../image/project1.png'
+import cyber from '../image/cyber.png'
 
 // Project data
 const projectData = [
   {
     id: 1,
-    image: 'src/image/gallery.jpg', // Replace with actual image paths
+    image: cleardrive, // Replace with actual image paths
     projectName: 'ClearDrive',
     description: 'A website which shows the most safest roads during poor visibility conditions to prevent accidents',
     githubLink: "https://github.com/Tannic-Paprika/ClearDrive",
@@ -16,7 +20,7 @@ const projectData = [
   },
   {
     id: 2,
-    image: 'src/image/livecode.png',
+    image: livecode,
     projectName: 'Live Code',
     description: 'A code editor made for hackathons in which participants can code together and collaborate',
     githubLink: "https://github.com/Tannic-Paprika/Live-Code",
@@ -27,7 +31,7 @@ const projectData = [
   },
   {
     id: 3,
-    image: 'src/image/project1.png',
+    image: project1,
     projectName: 'SmartWatch Stressor',
     description: 'Built a web interface to show stress levels in real time after ML processing of health vitals from an IoT device',
     githubLink: "https://github.com/Tannic-Paprika/Titan_hackathon",
@@ -38,7 +42,7 @@ const projectData = [
   },
   {
     id: 4,
-    image: 'src/image/cyber.png',
+    image: cyber,
     projectName: 'SnapTrace',
     description: 'A cybersecurity tool which identifies threats and cyber-attacks from system and network logs',
     githubLink: "https://github.com/Aankirz/SnapTrace",
