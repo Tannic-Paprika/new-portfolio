@@ -10,7 +10,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center px-6 sm:px-8 md:px-16 lg:px-24 xl:px-32 relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center px-6 sm:px-8 md:px-16 lg:px-24 xl:px-32 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
@@ -111,8 +111,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats - Moved to bottom with proper spacing */}
-        <div className={`mt-16 lg:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 transform transition-all duration-1000 delay-400 ${
+        {/* Stats */}
+        <div className={`mt-24 lg:mt-32 xl:mt-40 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 transform transition-all duration-1000 delay-400 ${
           isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}>
           {[
@@ -121,9 +121,9 @@ export default function Hero() {
             { number: "15+", label: "Technologies" },
             { number: "100%", label: "Client Satisfaction" }
           ].map((stat, index) => (
-            <div key={index} className="text-center p-4 lg:p-6 bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/30 hover:border-purple-500/30 transition-all duration-300">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent mb-2">{stat.number}</div>
-              <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
+            <div key={index} className="text-center p-6 lg:p-8 bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/30 hover:border-purple-500/30 transition-all duration-300">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent mb-3">{stat.number}</div>
+              <div className="text-xs sm:text-sm lg:text-base text-gray-400">{stat.label}</div>
             </div>
           ))}
         </div>
