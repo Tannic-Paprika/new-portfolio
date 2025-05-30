@@ -24,11 +24,6 @@ export default function Hero() {
           <div className={`space-y-8 transform transition-all duration-1000 ${
             isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
-            <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/30 text-purple-300 rounded-full text-sm font-medium backdrop-blur-sm">
-              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-              Available for opportunities
-            </div>
-
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
                 Hi, I'm <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Raj</span>
