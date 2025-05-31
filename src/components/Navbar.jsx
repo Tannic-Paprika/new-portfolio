@@ -45,13 +45,10 @@ export default function Navbar() {
             {/* CTA Button */}
             <button
               onClick={() => (window.location.href = 'mailto:rajpattnaik426@gmail.com')}
-              className="group relative inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-violet-600 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:from-purple-500 hover:to-violet-500 shadow-lg hover:shadow-purple-500/25"
+              className="flex items-center gap-2 px-4 py-1.5 border border-purple-500 text-purple-300 text-sm font-medium rounded-full hover:bg-purple-600/10 hover:text-purple-200 transition-all duration-200"
             >
-              {/* Button glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-600 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
-              
-              <Mail className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-              <span className="relative">Hire me</span>
+              <Mail className="w-4 h-4" />
+              Hire me
             </button>
           </div>
         </div>
