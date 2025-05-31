@@ -3,3 +3,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ──────────────────────────────────── */
+/*  Global “no-white-flash” baseline   */
+/* ──────────────────────────────────── */
+@layer base {
+  html,
+  body {
+    /* same near-black your hero uses */
+    @apply bg-[#09090b] text-gray-200 antialiased;
+    /* stops the overscroll bounce revealing white */
+    overscroll-behavior-y: none;
+  }
+}
