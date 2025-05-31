@@ -29,10 +29,24 @@ export default function Hero() {
               I specialize in Python and JavaScript-based backends, creating scalable and efficient server-side solutions that power impactful applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 pt-2">
-              <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-violet-600 text-white rounded-xl font-semibold hover:from-purple-500 hover:to-violet-500 transition-transform hover:scale-105">
+              <a
+                href="mailto:rajpattnaik426@gmail.com"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-violet-600 text-white rounded-xl font-semibold hover:from-purple-500 hover:to-violet-500 transition-transform hover:scale-105"
+              >
                 Get In Touch <ArrowRight className="ml-3 w-5 h-5" />
               </a>
-              <a href="#projects" className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-500/30 text-purple-300 rounded-xl font-semibold hover:border-purple-400 hover:bg-purple-500/10">
+              <a
+                href="#projects"
+                onClick={(e) => {
+                  e.preventDefault();                         // stop the default jump
+                  document
+                    .getElementById('projects')               // find the target section
+                    ?.scrollIntoView({ behavior: 'smooth' }); // smooth-scroll
+                }}
+                className="inline-flex items-center justify-center px-8 py-4
+                          border-2 border-purple-500/30 text-purple-300 rounded-xl
+                          font-semibold hover:border-purple-400 hover:bg-purple-500/10"
+              >
                 View My Work
               </a>
             </div>

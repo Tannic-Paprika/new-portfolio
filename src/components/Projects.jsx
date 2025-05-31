@@ -74,6 +74,7 @@ export default function Projects() {
 
   return (
     <section
+      id="projects"
       ref={sectionRef}
       className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center px-4 sm:px-6 md:px-12 lg:px-24 py-16 relative overflow-hidden"
     >
