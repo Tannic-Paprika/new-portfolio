@@ -1,6 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FaNodeJs, FaCloud, FaServer } from 'react-icons/fa';
-import { SiDjango, SiFlask } from 'react-icons/si';
+import {
+  FaNodeJs,
+  FaCloud,
+  FaServer,
+  FaReact,
+  FaAws,
+} from 'react-icons/fa';
+import {
+  SiDjango,
+  SiSpring,
+  SiFastapi,
+  SiDocker,
+  SiRedux,
+} from 'react-icons/si';
+
 
 import jsicon     from '../image/icons/js1.png';
 import htmlicon   from '../image/icons/html5.svg';
@@ -65,67 +78,64 @@ export default function About() {
 
           {/* ───── text side ───── */}
           <div className={`space-y-10 lg:space-y-12 transition-all duration-1000 ${isVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0   translate-y-8'}`}>
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-8'}`}>
 
             <header className="space-y-6 text-center lg:text-left">
               <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold
-                             bg-gradient-to-r from-purple-400 via-violet-400 to-fuchsia-400
-                             bg-clip-text text-transparent leading-tight">
-                About Me
+                            bg-gradient-to-r from-purple-400 via-violet-400 to-fuchsia-400
+                            bg-clip-text text-transparent leading-tight">
+                About&nbsp;Me
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full mx-auto lg:mx-0" />
             </header>
 
             <div className="space-y-8 text-center lg:text-left">
+              {/* ── Core backend line ───────────────────────────────────────────── */}
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                My expertise lies in backend development, with substantial experience in
-                {' '}
-                <span className="inline-flex items-center mx-1 px-2 py-1
-                                 bg-green-500/20 border border-green-500/30 rounded-md
-                                 text-green-300 text-sm">
+                I build <span className="font-semibold text-white">production-grade backends</span> with&nbsp;
+                <span className="inline-flex items-center mx-1 px-2 py-1 bg-green-500/20 border border-green-500/30 rounded-md text-green-300 text-sm">
+                  <SiFastapi className="mr-1" size={14}/> FastAPI
+                </span>,&nbsp;
+                <span className="inline-flex items-center mx-1 px-2 py-1 bg-green-500/20 border border-green-500/30 rounded-md text-green-300 text-sm">
                   <SiDjango className="mr-1" size={14}/> Django
-                </span>,{' '}
-                <span className="inline-flex items-center mx-1 px-2 py-1
-                                 bg-gray-500/20 border border-gray-500/30 rounded-md
-                                 text-gray-300 text-sm">
-                  <SiFlask className="mr-1" size={14}/> Flask
-                </span>{' '}
-                and
-                {' '}
-                <span className="inline-flex items-center mx-1 px-2 py-1
-                                 bg-green-500/20 border border-green-500/30 rounded-md
-                                 text-green-300 text-sm">
+                </span>,&nbsp;
+                <span className="inline-flex items-center mx-1 px-2 py-1 bg-green-500/20 border border-green-500/30 rounded-md text-green-300 text-sm">
+                  <SiSpring className="mr-1" size={14}/> Spring
+                </span>and&nbsp;
+                <span className="inline-flex items-center mx-1 px-2 py-1 bg-gray-500/20 border border-gray-500/30 rounded-md text-gray-300 text-sm">
                   <FaNodeJs className="mr-1" size={14}/> Node.js
-                </span>.
+                </span>, wiring them into event-driven micro-services that stay fast under load.
               </p>
 
+              {/* ── API + cloud line ───────────────────────────────────────────── */}
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                I am deeply committed to continuously expanding my knowledge in backend technologies,
-                including
-                {' '}
-                <span className="inline-flex items-center mx-1 px-2 py-1
-                                 bg-purple-500/20 border border-purple-500/30 rounded-md
-                                 text-purple-300 text-sm">
-                  <FaServer className="mr-1" size={14}/> API development
-                </span>{' '}
-                and
-                {' '}
-                <span className="inline-flex items-center mx-1 px-2 py-1
-                                 bg-blue-500/20 border border-blue-500/30 rounded-md
-                                 text-blue-300 text-sm">
-                  <FaCloud className="mr-1" size={14}/> cloud computing
-                </span>.
+                Passionate about clean&nbsp;
+                <span className="inline-flex items-center mx-1 px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded-md text-purple-300 text-sm">
+                  <FaServer className="mr-1" size={14}/> API design
+                </span>, solid testing, and <span className="font-semibold text-white">cloud-native ops</span>.
+                I containerise with&nbsp;
+                <span className="inline-flex items-center mx-1 px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded-md text-blue-300 text-sm">
+                  <SiDocker className="mr-1" size={14}/> Docker
+                </span> and ship to&nbsp;
+                <span className="inline-flex items-center mx-1 px-2 py-1 bg-yellow-500/20 border border-yellow-500/30 rounded-md text-yellow-300 text-sm">
+                  <FaAws className="mr-1" size={14}/> AWS
+                </span> with CI/CD and observability baked in.
               </p>
 
+              {/* ── Full-stack note ────────────────────────────────────────────── */}
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                I also bring experience in full-stack development, seamlessly integrating React-based
-                frontends with microservices-driven backends. With a solid background in state
-                management using Redux, I've developed scalable and efficient APIs, leveraging modern
-                backend frameworks and technologies.
+                Full-stack fluent: I plug&nbsp;
+                <span className="inline-flex items-center mx-1 px-2 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-md text-cyan-300 text-sm">
+                  <FaReact className="mr-1" size={14}/> React
+                </span> +&nbsp;
+                <span className="inline-flex items-center mx-1 px-2 py-1 bg-red-500/20 border border-red-500/30 rounded-md text-red-300 text-sm">
+                  <SiRedux className="mr-1" size={14}/> Redux
+                </span> front-ends straight into my own services for true end-to-end ownership. Always levelling up—currently geeking out on distributed queues and shaving milliseconds off Postgres.
               </p>
             </div>
           </div>
+
 
           {/* ───── skills side ───── */}
           <div className={`space-y-10 lg:space-y-12 transition-all duration-1000 delay-200 ${isVisible

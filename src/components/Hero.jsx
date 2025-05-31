@@ -26,7 +26,7 @@ export default function Hero() {
               <h2 className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-semibold">Backend Developer</h2>
             </header>
             <p className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-xl leading-relaxed">
-              I specialize in Python and JavaScript-based backends, creating scalable and efficient server-side solutions that power impactful applications.
+            I design resilient backends be it in Python,JavaScript,Java or Go — built for scale, speed, and clean observability.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 pt-2">
               <a

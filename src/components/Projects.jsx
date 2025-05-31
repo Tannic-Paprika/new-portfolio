@@ -8,6 +8,18 @@ import cyber from '../image/cyber.png';
 const projectData = [
   {
     id: 1,
+    image: cyber,
+    projectName: 'SnapTrace',
+    description:
+      'A cybersecurity tool which identifies threats and cyber-attacks from system and network logs',
+    githubLink: 'https://github.com/Aankirz/SnapTrace',
+    pageLink: 'https://snap-trace.vercel.app/',
+    technologies: ['Python', 'Cybersecurity', 'Log Analysis', 'React'],
+    category: 'Security Tool',
+    featured: true
+  },
+  {
+    id: 2,
     image: cleardrive,
     projectName: 'ClearDrive',
     description:
@@ -18,8 +30,9 @@ const projectData = [
     category: 'Web Application',
     featured: true
   },
+  
   {
-    id: 2,
+    id: 3,
     image: livecode,
     projectName: 'Live Code',
     description:
@@ -28,10 +41,10 @@ const projectData = [
     pageLink: 'https://live-code-f3g2.vercel.app/',
     technologies: ['React', 'Socket.io', 'CodeMirror', 'Node.js'],
     category: 'Collaboration Tool',
-    featured: true
+    featured: false
   },
   {
-    id: 3,
+    id: 4,
     image: project1,
     projectName: 'SmartWatch Stressor',
     description:
@@ -42,18 +55,6 @@ const projectData = [
     category: 'IoT & ML',
     featured: false
   },
-  {
-    id: 4,
-    image: cyber,
-    projectName: 'SnapTrace',
-    description:
-      'A cybersecurity tool which identifies threats and cyber-attacks from system and network logs',
-    githubLink: 'https://github.com/Aankirz/SnapTrace',
-    pageLink: 'https://snap-trace.vercel.app/',
-    technologies: ['Python', 'Cybersecurity', 'Log Analysis', 'React'],
-    category: 'Security Tool',
-    featured: false
-  }
 ];
 
 export default function Projects() {

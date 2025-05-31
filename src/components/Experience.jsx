@@ -9,42 +9,53 @@ const experienceData = [
   {
     role: 'Backend Engineer Intern',
     organisation: 'Kiwi',
-    startDate: 'January, 2025',
+    startDate: 'January 2025',
     endDate: 'Present',
     experiences: [
-      'Developed core backend services (card provisioning, vault, Yes Bank adapter, polling) in a Java microservices architecture at Kiwi',
-      'Optimized caching and log streaming in Signoz to reduce logging costs and improve observability.'
+      'Built 4 core micro-services (card provisioning, vault, Yes Bank adapter, polling) in a Java + Spring stack',
+      'Authored an Airflow DAG to re-sync failed LOS pushes, with daily logs & email alerts',
+      'Cut Signoz logging cost 60 % via smart caching + log-stream optimisation',
+      'Refactored onboarding flow with Builder / Factory patterns for cleaner reuse'
     ],
     imageSrc: KiwiImage,
     type: 'current',
-    technologies: ['Java', 'Microservices', 'Signoz', 'Banking APIs']
+    technologies: [
+      'Java', 'Spring', 'Apache Airflow', 'Redis', 'Signoz', 'AWS', 'Micro-services'
+    ]
   },
   {
-    role: 'FullStack Engineer Intern',
-    organisation: 'NeuralSpace Inc.',
-    startDate: 'June, 2024',
-    endDate: 'August, 2024',
+    role: 'Full-Stack Engineer Intern',
+    organisation: 'NeuralSpace.ai',
+    startDate: 'June 2024',
+    endDate: 'August 2024',
     experiences: [
-      'Developed the Adjust feature similar to the Subtitle Editor app in Linux',
-      'Quickened the build file of LocAI frontend by 85%'
+      'LocAI Development: Full-stack work on the LocAI platform that auto-generates subtitles from video using AI STT.',
+      'STT Editor (Adjust feature): Added a Linux-style subtitle-segment editor for precise timeline tweaks.',
+      'Build Optimisation: Cut front-end build time by 85 % through dependency pruning, lazy loading, and caching.'
     ],
     imageSrc: NeuralSpaceImage,
     type: 'past',
-    technologies: ['React', 'Linux', 'Frontend Optimization', 'AI Tools']
+    technologies: [
+      'React', 'Node.js', 'Redis', 'NATS', 'Docker', 'Frontend Optimisation'
+    ]
   },
   {
-    role: 'Software Engineer Intern',
-    organisation: 'Hyperspec.AI',
-    startDate: 'Sept, 2023',
-    endDate: 'April, 2024',
+    role: 'Developer Intern',
+    organisation: 'Hyperspec.ai',
+    startDate: 'Sept 2023',
+    endDate: 'April 2024',
     experiences: [
-      'Developed the HMI, or the human‑machine interface',
-      'This interface handled real‑time requests from the device used for data visualization and manipulation'
+      'Backend Development: Built high-performance services for the Hyperlite sensor pipeline.',
+      'HMI Interface: Delivered a real-time web HMI for device control, data visualisation and manipulation.',
+      'Performance Practices: Employed multithreading, IPC, and solid DB design to keep latency low under load.'
     ],
     imageSrc: HyperspecImage,
     type: 'past',
-    technologies: ['HMI Development', 'Real‑time Systems', 'Data Visualization']
-  },
+    technologies: [
+      'Python', 'Node.js', 'AWS', 'Prisma ORM', 'Apache Airflow',
+      'Jenkins', 'Docker', 'Real-time Systems'
+    ]
+  },  
   {
     role: 'UG Intern',
     organisation: 'I‑Hub DivyaSampark',
