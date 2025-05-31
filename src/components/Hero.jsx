@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Code2, ArrowRight } from 'lucide-react';
 import heroImage from '../image/heroImage.jpeg';
+import { SiLeetcode } from 'react-icons/si';
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,7 +27,7 @@ export default function Hero() {
               <h2 className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-semibold">Backend Developer</h2>
             </header>
             <p className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-xl leading-relaxed">
-            I design resilient backends be it in Python,JavaScript,Java or Go — built for scale, speed, and clean observability.
+            I design resilient backends be it in Python,JavaScript,Java or G — built for scale, speed, and clean observability.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 pt-2">
               <a
@@ -51,9 +52,9 @@ export default function Hero() {
               </a>
             </div>
             <div className="pt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
-              <span className="text-sm text-gray-500">Connect with me</span>
+              <span className="text-sm text-gray-500">Checkout my profiles</span>
               <div className="flex gap-5">
-                {[Github, Linkedin, Code2].map((Icon, i) => (
+                {[Github, Linkedin, SiLeetcode].map((Icon, i) => (
                   <a
                     key={i}
                     href={i === 0 ? 'https://github.com/Tannic-Paprika' : i === 1 ? 'https://linkedin.com/in/raj-pattnaik' : 'https://leetcode.com/u/warmlobster_87/'}
