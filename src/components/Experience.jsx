@@ -15,6 +15,7 @@ const experienceData = [
       'Built 4 core micro-services (card provisioning, vault, Yes Bank adapter, polling) in a Java + Spring stack',
       'Authored an Airflow DAG to re-sync failed LOS pushes, with daily logs & email alerts',
       'Cut Signoz logging cost 60 % via smart caching + log-stream optimisation',
+      'Integrated Meta CAPI to restore iOS conversion tracking, increasing attribution coverage by 28 % after iOS 14.5 privacy updates',
       'Refactored onboarding flow with Builder / Factory patterns for cleaner reuse'
     ],
     imageSrc: KiwiImage,
