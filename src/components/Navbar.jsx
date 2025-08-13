@@ -44,11 +44,12 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* CTA Button */}
             <button
-              onClick={() => (window.location.href = 'mailto:rajpattnaik426@gmail.com')}
+              onClick={() =>
+                (window.location.href = 'https://drive.google.com/file/d/1XZSjZEMm8zTa20mwc3W_fRxi-ZYGaLHG/view')
+              }
               className="flex items-center gap-2 px-4 py-1.5 border border-purple-500 text-purple-300 text-sm font-medium rounded-full hover:bg-purple-600/10 hover:text-purple-200 transition-all duration-200"
             >
-              <Mail className="w-4 h-4" />
-              Hire me
+              View Resume
             </button>
           </div>
         </div>
