@@ -32,13 +32,13 @@ function HeroIntro() {
 
         {/* Company cards */}
         <div className="space-y-3">
-          <p className="font-mono text-[11px] text-zinc-600 uppercase tracking-widest">Notable companies I've worked for</p>
+          <p className="font-mono text-[11px] text-white uppercase tracking-widest">Notable companies I've worked for</p>
           <div className="flex gap-4 flex-wrap">
 
             {/* Kiwi card — spinning white border */}
             <div
               className="group relative w-52 h-36 rounded-2xl p-[2px] overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.03]"
-              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => { const els = document.querySelectorAll('[id="experience"]'); const el = Array.from(els).find(e => e.offsetParent !== null) ?? els[0]; if (el) { const top = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top, behavior: 'smooth' }); } }}
             >
               {/* Rotating conic gradient border */}
               <div
@@ -73,7 +73,7 @@ function HeroIntro() {
             {/* DMG card — spinning orange border */}
             <div
               className="group relative w-72 h-36 rounded-2xl p-[2px] overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.03]"
-              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => { const els = document.querySelectorAll('[id="experience"]'); const el = Array.from(els).find(e => e.offsetParent !== null) ?? els[0]; if (el) { const top = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top, behavior: 'smooth' }); } }}
             >
               {/* Rotating conic gradient border */}
               <div

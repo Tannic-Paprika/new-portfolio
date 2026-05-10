@@ -71,13 +71,13 @@ export default function Hero() {
 
         {/* Company cards */}
         <div className={`w-full space-y-3 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <p className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest text-center">Notable companies I've worked for</p>
+          <p className="font-mono text-[10px] text-white uppercase tracking-widest text-center">Notable companies I've worked for</p>
           <div className="flex gap-3 justify-center flex-wrap">
 
             {/* Kiwi card */}
             <div
               className="group relative w-[140px] h-24 rounded-2xl p-[2px] overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.03]"
-              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => { const els = document.querySelectorAll('[id="experience"]'); const el = Array.from(els).find(e => e.offsetParent !== null) ?? els[0]; if (el) { const top = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top, behavior: 'smooth' }); } }}
             >
               <div className="absolute animate-spin" style={{
                 inset: '-60%',
@@ -99,7 +99,7 @@ export default function Hero() {
             {/* DMG card */}
             <div
               className="group relative w-[160px] h-24 rounded-2xl p-[2px] overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.03]"
-              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => { const els = document.querySelectorAll('[id="experience"]'); const el = Array.from(els).find(e => e.offsetParent !== null) ?? els[0]; if (el) { const top = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top, behavior: 'smooth' }); } }}
             >
               <div className="absolute animate-spin" style={{
                 inset: '-60%',

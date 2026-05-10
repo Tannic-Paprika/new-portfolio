@@ -6,13 +6,13 @@
 
 @layer base {
   html {
-    overflow-x: hidden;
+    overflow-x: clip;
     overscroll-behavior-x: none;
   }
   body {
     @apply bg-[#09090b] text-zinc-200 antialiased;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 }
 
