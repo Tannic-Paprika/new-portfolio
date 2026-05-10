@@ -34,8 +34,8 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-5 inset-x-0 z-50 flex justify-center pointer-events-none">
-      <div className="pointer-events-auto flex items-center gap-1 px-4 py-2 rounded-2xl border border-white/10 bg-zinc-900/60 backdrop-blur-xl shadow-xl shadow-black/40">
+    <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50">
+      <div className="flex items-center gap-1 px-4 py-2 rounded-2xl border border-white/10 bg-zinc-900/60 backdrop-blur-xl shadow-xl shadow-black/40">
 
         {/* Nav icons */}
         {NAV.map(({ id, Icon, label }) => (
