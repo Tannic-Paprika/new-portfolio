@@ -32,7 +32,10 @@ export default function Navbar() {
   const scrollTo = (id) => {
     const els = document.querySelectorAll(`[id="${id}"]`)
     const el = Array.from(els).find(e => e.offsetParent !== null) ?? els[0]
-    el?.scrollIntoView({ behavior: 'smooth' })
+    if (!el) return
+    const offset = 80
+    const top = el.getBoundingClientRect().top + window.scrollY - offset
+    window.scrollTo({ top, behavior: 'smooth' })
   }
 
   return (
