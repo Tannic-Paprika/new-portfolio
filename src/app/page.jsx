@@ -14,7 +14,7 @@ function HeroIntro() {
   return (
     <section className="flex items-center pl-10 pr-10 pt-40 pb-16 min-h-screen">
       <div className="space-y-12 w-full">
-        <div className="leading-[0.85]">
+        <div className="leading-[1.05]">
           <h1 className="text-[clamp(4rem,8vw,9rem)] font-black text-white tracking-tight uppercase">
             Backend
           </h1>

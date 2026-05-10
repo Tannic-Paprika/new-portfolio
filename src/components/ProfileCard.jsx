@@ -37,7 +37,7 @@ export default function ProfileCard() {
   const onMouseLeave = () => setTilt({ x: 0, y: 0 })
 
   return (
-    <div className="flex items-center justify-center h-full px-[60px]">
+    <div className="flex items-start justify-center h-full px-[60px] pt-60">
       <div
         ref={wrapperRef}
         onMouseMove={onMouseMove}
