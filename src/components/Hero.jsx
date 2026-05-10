@@ -55,9 +55,9 @@ export default function Hero() {
 
         {/* Heading — centered */}
         <div className={`w-full text-center leading-[1.05] transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <h1 className="text-[clamp(2.8rem,11vw,4.5rem)] font-black text-white tracking-tight uppercase">Backend</h1>
+          <h1 className="text-[clamp(2.8rem,11vw,4.5rem)] font-black text-white tracking-wide uppercase">Backend</h1>
           <h1
-            className="text-[clamp(2.8rem,11vw,4.5rem)] font-black tracking-tight uppercase"
+            className="text-[clamp(2.8rem,11vw,4.5rem)] font-black tracking-wide uppercase"
             style={{ WebkitTextStroke: '2px rgba(255,255,255,0.15)', color: 'transparent' }}
           >
             Engineer

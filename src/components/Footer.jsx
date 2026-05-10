@@ -20,9 +20,9 @@ export default function Footer() {
 
         {/* Big heading */}
         <div className="leading-[1.05] mb-10">
-          <h2 className="text-[clamp(2.5rem,5.5vw,5.5rem)] font-black text-white tracking-tight uppercase">Let's</h2>
+          <h2 className="text-[clamp(2.5rem,5.5vw,5.5rem)] font-black text-white tracking-wide uppercase">Let's</h2>
           <h2
-            className="text-[clamp(2.5rem,5.5vw,5.5rem)] font-black tracking-tight uppercase"
+            className="text-[clamp(2.5rem,5.5vw,5.5rem)] font-black tracking-wide uppercase"
             style={{ WebkitTextStroke: '1.5px rgba(255,255,255,0.12)', color: 'transparent' }}
           >
             Connect

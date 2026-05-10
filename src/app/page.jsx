@@ -15,11 +15,11 @@ function HeroIntro() {
     <section className="flex items-center pl-10 pr-10 pt-40 pb-16 min-h-screen">
       <div className="space-y-12 w-full">
         <div className="leading-[1.05]">
-          <h1 className="text-[clamp(4rem,8vw,9rem)] font-black text-white tracking-tight uppercase">
+          <h1 className="text-[clamp(4rem,8vw,9rem)] font-black text-white tracking-wide uppercase">
             Backend
           </h1>
           <h1
-            className="text-[clamp(4rem,8vw,9rem)] font-black tracking-tight uppercase"
+            className="text-[clamp(4rem,8vw,9rem)] font-black tracking-wide uppercase"
             style={{ WebkitTextStroke: '2.5px rgba(255,255,255,0.13)', color: 'transparent' }}
           >
             Engineer

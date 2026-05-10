@@ -56,9 +56,9 @@ export default function Projects() {
     <section id="projects" ref={ref} className="bg-[#09090b] flex flex-col justify-center pl-10 pr-10 py-16">
 
       <div className={`leading-[1.05] mb-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-        <h2 className="text-[clamp(2.5rem,5.5vw,5.5rem)] font-black text-white tracking-tight uppercase">Recent</h2>
+        <h2 className="text-[clamp(2.5rem,5.5vw,5.5rem)] font-black text-white tracking-wide uppercase">Recent</h2>
         <h2
-          className="text-[clamp(2.5rem,5.5vw,5.5rem)] font-black tracking-tight uppercase"
+          className="text-[clamp(2.5rem,5.5vw,5.5rem)] font-black tracking-wide uppercase"
           style={{ WebkitTextStroke: '1.5px rgba(255,255,255,0.12)', color: 'transparent' }}
         >
           Projects
