@@ -1,64 +1,81 @@
-import React, { useState, useEffect } from 'react';
-import { Mail } from 'lucide-react';
+'use client'
+
+import { useState, useEffect } from 'react'
+import { User, Briefcase, Code2, Mail, FileText } from 'lucide-react'
+
+const NAV = [
+  { id: 'about',      Icon: User,      label: 'About'      },
+  { id: 'experience', Icon: Briefcase, label: 'Experience' },
+  { id: 'projects',   Icon: Code2,     label: 'Projects'   },
+  { id: 'contact',    Icon: Mail,      label: 'Contact'    },
+]
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [active, setActive] = useState('')
 
   useEffect(() => {
-    const handle = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handle);
-    return () => window.removeEventListener('scroll', handle);
-  }, []);
+    const sections = NAV.map(n => document.getElementById(n.id)).filter(Boolean)
 
-  // Elegant RP Icon Component
-  const RPIcon = () => (
-    <div className="relative group">
-      <div className="flex items-center justify-center w-10 h-10 transition-all duration-300 group-hover:scale-110">
-        <span className="text-2xl font-bold bg-gradient-to-br from-white via-purple-200 to-violet-300 bg-clip-text text-transparent tracking-tight transform transition-all duration-300 group-hover:rotate-3">
-          RP
-        </span>
-      </div>
-    </div>
-  );
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) setActive(entry.target.id)
+        })
+      },
+      { rootMargin: '-40% 0px -55% 0px' }
+    )
+
+    sections.forEach(s => obs.observe(s))
+    return () => obs.disconnect()
+  }, [])
+
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-lg'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="w-screen pr-6 pl-5">
-        <div className="flex h-16 sm:h-20 items-center justify-between gap-4">
-          {/* Left side with RP Logo and Availability Badge - aligned with main content */}
-          <div className="flex items-center gap-4 group cursor-pointer ml-0 sm:ml-8 md:ml-12 lg:ml-20 xl:ml-24">
-            <RPIcon />
-            <span className="inline-flex items-center px-3 py-1.5 bg-gray-800/50 border border-gray-700/50 text-purple-300 rounded-xl text-xs font-medium backdrop-blur-sm">
-              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse" />
-              Available for opportunities
-            </span>
-          </div>
+    <nav className="fixed top-5 inset-x-0 z-50 flex justify-center pointer-events-none">
+      <div className="pointer-events-auto flex items-center gap-1 px-4 py-2 rounded-2xl border border-white/10 bg-zinc-900/60 backdrop-blur-xl shadow-xl shadow-black/40">
 
-          {/* Right side with CTA Button */}
-          <div className="flex items-center">
-            {/* CTA Button */}
-            <button
-              onClick={() =>
-                (window.location.href = 'https://drive.google.com/file/d/1XZSjZEMm8zTa20mwc3W_fRxi-ZYGaLHG/view')
-              }
-              className="flex items-center gap-2 px-4 py-1.5 border border-purple-500 text-purple-300 text-sm font-medium rounded-full hover:bg-purple-600/10 hover:text-purple-200 transition-all duration-200"
-            >
-              View Resume
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      {/* Animated bottom border */}
-      <div className="h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent">
-        <div className="h-full bg-gradient-to-r from-purple-500/60 to-violet-500/60 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+        {/* Nav icons */}
+        {NAV.map(({ id, Icon, label }) => (
+          <button
+            key={id}
+            onClick={() => scrollTo(id)}
+            title={label}
+            className={`relative group flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200
+              ${active === id
+                ? 'bg-orange-500/20 text-orange-400'
+                : 'text-zinc-500 hover:text-zinc-200 hover:bg-white/5'
+              }`}
+          >
+            <Icon className="w-4 h-4" />
+
+            {/* Tooltip */}
+            <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 px-2 py-1 rounded-lg bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-150 pointer-events-none">
+              {label}
+            </span>
+          </button>
+        ))}
+
+        {/* Divider */}
+        <div className="w-px h-5 bg-zinc-700/60 mx-1" />
+
+        {/* Resume */}
+        <button
+          onClick={() => window.open('https://drive.google.com/file/d/1XZSjZEMm8zTa20mwc3W_fRxi-ZYGaLHG/view')}
+          title="Resume"
+          className="relative group flex items-center justify-center w-10 h-10 rounded-xl text-zinc-500 hover:text-orange-400 hover:bg-orange-500/10 transition-all duration-200"
+        >
+          <FileText className="w-4 h-4" />
+
+          {/* Tooltip */}
+          <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 px-2 py-1 rounded-lg bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-150 pointer-events-none">
+            Resume
+          </span>
+        </button>
+
       </div>
     </nav>
-  );
+  )
 }
