@@ -30,7 +30,9 @@ export default function Navbar() {
   }, [])
 
   const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    const els = document.querySelectorAll(`[id="${id}"]`)
+    const el = Array.from(els).find(e => e.offsetParent !== null) ?? els[0]
+    el?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (

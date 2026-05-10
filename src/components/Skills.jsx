@@ -46,7 +46,7 @@ export default function Skills() {
       </div>
 
       <div className={`transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-        <div className="grid grid-cols-2 gap-x-6 gap-y-7">
+        <div className="grid grid-cols-3 gap-x-4 gap-y-7">
           {SKILLS.map((s, idx) => (
             <div
               key={s.name}
