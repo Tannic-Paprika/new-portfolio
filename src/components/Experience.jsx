@@ -1,7 +1,51 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, ChevronDown, ChevronUp } from 'lucide-react'
+
+function BulletList({ bullets }) {
+  const [expanded, setExpanded] = useState(false)
+
+  return (
+    <div className="mb-4 max-w-2xl">
+      <div className="relative">
+        <ul
+          className="text-zinc-400 text-base leading-relaxed space-y-1.5 list-none overflow-hidden"
+          style={!expanded ? { maxHeight: '8rem' } : undefined}
+        >
+          {bullets.map((b, i) => (
+            <li key={i} className="flex gap-2">
+              <span className="text-orange-500 mt-1.5 flex-shrink-0">◦</span>
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Fade + read more overlay */}
+        {!expanded && (
+          <div className="absolute bottom-0 left-0 right-0 h-10 flex items-end"
+            style={{ background: 'linear-gradient(to bottom, transparent, #09090b)' }}>
+            <button
+              onClick={() => setExpanded(true)}
+              className="flex items-center gap-1 text-xs font-mono text-orange-400 hover:text-orange-300 transition-colors"
+            >
+              <ChevronDown className="w-3.5 h-3.5" /> read more
+            </button>
+          </div>
+        )}
+      </div>
+
+      {expanded && (
+        <button
+          onClick={() => setExpanded(false)}
+          className="mt-2 flex items-center gap-1 text-xs font-mono text-orange-400 hover:text-orange-300 transition-colors"
+        >
+          <ChevronUp className="w-3.5 h-3.5" /> read less
+        </button>
+      )}
+    </div>
+  )
+}
 
 const JOBS = [
   {
@@ -117,14 +161,7 @@ export default function Experience() {
                 </div>
                 <p className="text-orange-400 text-sm font-medium mb-3">{job.role}</p>
                 {job.bullets ? (
-                  <ul className="text-zinc-400 text-base leading-relaxed mb-4 max-w-2xl space-y-1.5 list-none">
-                    {job.bullets.map((b, i) => (
-                      <li key={i} className="flex gap-2">
-                        <span className="text-orange-500 mt-1.5 flex-shrink-0">◦</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <BulletList bullets={job.bullets} />
                 ) : (
                   <p className="text-zinc-400 text-base leading-relaxed mb-4 max-w-2xl">{job.desc}</p>
                 )}

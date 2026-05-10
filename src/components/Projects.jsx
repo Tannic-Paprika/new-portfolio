@@ -65,7 +65,41 @@ export default function Projects() {
         </h2>
       </div>
 
-      <div>
+      {/* Mobile: card grid */}
+      <div className="grid grid-cols-1 gap-4 sm:hidden">
+        {PROJECTS.map((p, i) => (
+          <a
+            key={p.id}
+            href={p.live || p.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`group block rounded-2xl border border-zinc-800 overflow-hidden transition-all duration-700 hover:border-zinc-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+            style={{ transitionDelay: `${i * 80}ms` }}
+          >
+            <div className="overflow-hidden">
+              <img src={p.image} alt={p.name}
+                className="w-full h-40 object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors leading-tight">{p.name}</h3>
+                <ArrowUpRight className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+              <p className="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-2">{p.desc}</p>
+              <div className="flex flex-wrap gap-1.5">
+                {p.stack.map(t => (
+                  <span key={t} className="font-mono text-[10px] px-2 py-0.5 bg-white/[0.03] border border-zinc-800 text-zinc-500 rounded-md">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* Desktop: horizontal list */}
+      <div className="hidden sm:block">
         {PROJECTS.map((p, i) => (
           <a
             key={p.id}
