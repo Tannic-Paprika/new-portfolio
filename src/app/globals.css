@@ -5,10 +5,14 @@
 @tailwind utilities;
 
 @layer base {
-  html, body {
+  html {
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+  }
+  body {
     @apply bg-[#09090b] text-zinc-200 antialiased;
     scroll-behavior: smooth;
-    overscroll-behavior-x: none;
+    overflow-x: hidden;
   }
 }
 
